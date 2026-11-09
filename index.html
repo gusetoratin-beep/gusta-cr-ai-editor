@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 
 <html lang="pt-BR">
@@ -10,10 +8,6 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="theme-color" content="#080f20">
-
-  <meta name="description" content="GUSTA CR AI EDITOR - Seu gameplay. Nossa inteligência.">
-
   <title>GUSTA CR AI EDITOR</title>
 
   <style>
@@ -22,185 +16,79 @@
 
       box-sizing: border-box;
 
-      margin: 0;
-
-      padding: 0;
-
     }
 
     body {
 
-      font-family: Arial, sans-serif;
+      margin: 0;
+
+      padding: 30px 20px;
 
       background: #080f20;
 
-      color: #ffffff;
+      color: white;
 
-      min-height: 100vh;
-
-    }
-
-    header {
-
-      padding: 22px 18px;
-
-      border-bottom: 1px solid #1d3152;
-
-      display: flex;
-
-      justify-content: space-between;
-
-      align-items: center;
-
-    }
-
-    .logo {
-
-      font-size: 19px;
-
-      font-weight: 900;
-
-      letter-spacing: 1px;
-
-    }
-
-    .logo span {
-
-      color: #36a8ff;
-
-    }
-
-    .status {
-
-      font-size: 11px;
-
-      color: #ffd36a;
-
-      border: 1px solid #80652c;
-
-      padding: 6px 9px;
-
-      border-radius: 20px;
-
-    }
-
-    main {
-
-      max-width: 650px;
-
-      margin: auto;
-
-      padding: 25px 17px 45px;
-
-    }
-
-    .hero {
+      font-family: Arial, sans-serif;
 
       text-align: center;
 
-      padding: 28px 10px;
+    }
+
+    .container {
+
+      max-width: 600px;
+
+      margin: 50px auto;
+
+      padding: 30px 20px;
+
+      background: #111d33;
+
+      border: 1px solid #28649a;
+
+      border-radius: 18px;
 
     }
 
-    .hero h1 {
+    h1 {
 
-      font-size: 29px;
-
-      line-height: 1.2;
-
-      margin-bottom: 12px;
+      font-size: 27px;
 
     }
 
-    .hero h1 span {
+    h1 span {
 
       color: #36a8ff;
 
     }
 
-    .hero p {
+    p {
 
-      color: #aab9d1;
-
-      font-size: 14px;
+      color: #b7c7df;
 
       line-height: 1.6;
 
     }
 
-    .panel {
-
-      background: #111d33;
-
-      border: 1px solid #263c60;
-
-      border-radius: 17px;
-
-      padding: 20px;
-
-      margin-bottom: 18px;
-
-    }
-
-    .panel h2 {
-
-      font-size: 18px;
-
-      margin-bottom: 8px;
-
-    }
-
-    .description {
-
-      color: #9eafc9;
-
-      font-size: 13px;
-
-      line-height: 1.5;
-
-      margin-bottom: 17px;
-
-    }
-
-    .upload {
+    label {
 
       display: block;
 
-      border: 2px dashed #347fbd;
+      margin-top: 25px;
 
-      background: #0b172b;
+      padding: 25px 10px;
 
-      border-radius: 13px;
+      border: 2px dashed #36a8ff;
 
-      padding: 27px 12px;
+      border-radius: 12px;
 
-      text-align: center;
+      color: #36a8ff;
 
       cursor: pointer;
 
     }
 
-    .upload strong {
-
-      display: block;
-
-      color: #55b5ff;
-
-      font-size: 16px;
-
-      margin-bottom: 8px;
-
-    }
-
-    .upload small {
-
-      color: #91a4c0;
-
-      font-size: 12px;
-
-    }
-
-    input[type="file"] {
+    input {
 
       display: none;
 
@@ -208,15 +96,13 @@
 
     video {
 
+      display: none;
+
       width: 100%;
 
-      margin-top: 15px;
+      margin-top: 20px;
 
-      border-radius: 12px;
-
-      background: #000;
-
-      display: none;
+      border-radius: 10px;
 
     }
 
@@ -224,125 +110,27 @@
 
       width: 100%;
 
-      border: none;
-
-      border-radius: 11px;
+      margin-top: 20px;
 
       padding: 15px;
 
-      margin-top: 15px;
-
-      font-size: 15px;
-
-      font-weight: bold;
-
-      cursor: pointer;
-
-    }
-
-    .primary {
-
-      background: linear-gradient(90deg, #167bd0, #36a8ff);
-
-      color: white;
-
-    }
-
-    .secondary {
-
-      background: #1c2e4b;
-
-      color: #dceaff;
-
-    }
-
-    button:disabled {
-
-      opacity: .5;
-
-      cursor: not-allowed;
-
-    }
-
-    .feature {
-
-      display: flex;
-
-      gap: 12px;
-
-      padding: 13px 0;
-
-      border-bottom: 1px solid #263750;
-
-    }
-
-    .feature:last-child {
-
-      border-bottom: none;
-
-    }
-
-    .feature-icon {
-
-      font-size: 23px;
-
-    }
-
-    .feature strong {
-
-      display: block;
-
-      font-size: 14px;
-
-      margin-bottom: 5px;
-
-    }
-
-    .feature p {
-
-      color: #9eafc9;
-
-      font-size: 12px;
-
-      line-height: 1.5;
-
-    }
-
-    #result {
-
-      display: none;
-
-      margin-top: 15px;
-
-      padding: 14px;
+      border: none;
 
       border-radius: 10px;
 
-      background: #192b43;
+      background: #1689e8;
 
-      color: #d8eaff;
+      color: white;
 
-      font-size: 13px;
+      font-size: 16px;
 
-      line-height: 1.6;
-
-    }
-
-    footer {
-
-      text-align: center;
-
-      padding: 20px;
-
-      color: #71839e;
-
-      font-size: 11px;
-
-      line-height: 1.7;
+      font-weight: bold;
 
     }
 
-    .gold {
+    #status {
+
+      margin-top: 18px;
 
       color: #ffd36a;
 
@@ -354,243 +142,67 @@
 
 <body>
 
-  <header>
+  <div class="container">
 
-    <div class="logo">GUSTA CR <span>AI EDITOR</span></div>
+    <h1>GUSTA CR <span>AI EDITOR</span></h1>
 
-    <div class="status">● PROTÓTIPO</div>
+    <p>Seu gameplay. Nossa inteligência.</p>
 
-  </header>
+    <p>Seu espaço para analisar partidas e criar vídeos de Clash Royale.</p>
 
-  <main>
+    <label for="video">
 
-    <section class="hero">
+      🎮 TOQUE AQUI PARA IMPORTAR SUA PARTIDA
 
-      <h1>Seu gameplay.<br><span>Nossa inteligência.</span></h1>
+    </label>
 
-      <p>
+    <input type="file" id="video" accept="video/*">
 
-        Transforme suas partidas de Clash Royale em conteúdo.
+    <video id="preview" controls playsinline></video>
 
-        Analise suas jogadas e prepare seus melhores momentos.
+    <button onclick="analisar()">ANALISAR PARTIDA</button>
 
-      </p>
+    <p id="status">Aguardando seu vídeo...</p>
 
-    </section>
-
-    <section class="panel">
-
-      <h2>🎮 Importar partida</h2>
-
-      <p class="description">
-
-        Selecione uma gravação de tela do seu iPhone para visualizar
-
-        sua partida.
-
-      </p>
-
-      <label class="upload" for="videoFile">
-
-        <strong>＋ Escolher vídeo</strong>
-
-        <small>Toque aqui para selecionar uma gravação</small>
-
-      </label>
-
-      <input id="videoFile" type="file" accept="video/*">
-
-      <video id="preview" controls playsinline></video>
-
-      <button class="primary" id="analyzeBtn" disabled>
-
-        ANALISAR PARTIDA
-
-      </button>
-
-      <div id="result"></div>
-
-    </section>
-
-    <section class="panel">
-
-      <h2>🧠 Coach inteligente</h2>
-
-      <p class="description">
-
-        O objetivo é desenvolver uma análise estratégica completa
-
-        das suas partidas.
-
-      </p>
-
-      <div class="feature">
-
-        <div class="feature-icon">⚡</div>
-
-        <div>
-
-          <strong>Controle de elixir</strong>
-
-          <p>Identificação de vantagens e desperdícios de elixir.</p>
-
-        </div>
-
-      </div>
-
-      <div class="feature">
-
-        <div class="feature-icon">🃏</div>
-
-        <div>
-
-          <strong>Rotação de cartas</strong>
-
-          <p>Estudo da rotação, combinações e oportunidades de ataque.</p>
-
-        </div>
-
-      </div>
-
-      <div class="feature">
-
-        <div class="feature-icon">🏰</div>
-
-        <div>
-
-          <strong>Estratégia de batalha</strong>
-
-          <p>Análise de defesa, posicionamento e decisões importantes.</p>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <section class="panel">
-
-      <h2>🎬 Editor de vídeos</h2>
-
-      <p class="description">
-
-        A proposta é transformar os melhores momentos da partida
-
-        em vídeos curtos para TikTok, Reels e YouTube Shorts.
-
-      </p>
-
-      <div class="feature">
-
-        <div class="feature-icon">🔍</div>
-
-        <div>
-
-          <strong>Zoom inteligente</strong>
-
-          <p>Destacar momentos importantes da partida.</p>
-
-        </div>
-
-      </div>
-
-      <div class="feature">
-
-        <div class="feature-icon">🔥</div>
-
-        <div>
-
-          <strong>Melhores momentos</strong>
-
-          <p>Selecionar jogadas decisivas e momentos de destaque.</p>
-
-        </div>
-
-      </div>
-
-      <div class="feature">
-
-        <div class="feature-icon">📱</div>
-
-        <div>
-
-          <strong>Formato vertical</strong>
-
-          <p>Preparação de conteúdo para redes sociais.</p>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <footer>
-
-      <strong class="gold">GUSTA CR AI EDITOR</strong><br>
-
-      Seu gameplay. Nossa inteligência.<br>
-
-      Projeto independente em desenvolvimento.
-
-    </footer>
-
-  </main>
+  </div>
 
   <script>
 
-    const videoFile = document.getElementById("videoFile");
+    const video = document.getElementById("video");
 
     const preview = document.getElementById("preview");
 
-    const analyzeBtn = document.getElementById("analyzeBtn");
+    const status = document.getElementById("status");
 
-    const result = document.getElementById("result");
+    video.addEventListener("change", function() {
 
-    let videoURL = null;
+      const arquivo = this.files[0];
 
-    videoFile.addEventListener("change", function() {
+      if (!arquivo) return;
 
-      const file = this.files[0];
-
-      if (!file) return;
-
-      if (videoURL) {
-
-        URL.revokeObjectURL(videoURL);
-
-      }
-
-      videoURL = URL.createObjectURL(file);
-
-      preview.src = videoURL;
+      preview.src = URL.createObjectURL(arquivo);
 
       preview.style.display = "block";
 
-      analyzeBtn.disabled = false;
-
-      result.style.display = "block";
-
-      result.textContent =
-
-        "Vídeo carregado com sucesso. Você já pode visualizar sua partida.";
+      status.textContent = "Vídeo carregado com sucesso!";
 
     });
 
-    analyzeBtn.addEventListener("click", function() {
+    function analisar() {
 
-      result.style.display = "block";
+      if (!video.files.length) {
 
-      result.innerHTML =
+        status.textContent = "Primeiro importe uma partida.";
 
-        "<strong>Protótipo inicial.</strong><br>" +
+        return;
 
-        "A seleção e visualização do vídeo estão funcionando. " +
+      }
 
-        "A análise automática de cartas, tropas, elixir e decisões " +
+      status.textContent =
 
-        "estratégicas ainda será desenvolvida nas próximas etapas.";
+        "Vídeo recebido! A análise inteligente ainda está em desenvolvimento.";
 
-    });
+    }
 
   </script>
 
